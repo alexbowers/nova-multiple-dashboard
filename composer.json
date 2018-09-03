@@ -1,22 +1,16 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "AlexBowers/nova-multiple-dashboard",
+    "description": "Support for multiple custom dashboards in Laravel Nova",
     "keywords": [
         "laravel",
         "nova"
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../laravel-nova"
-        }
-    ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/AlexBowers/nova-multiple-dashboard",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Alex Bowers",
+            "email": "bowersbros@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +24,18 @@
     },
     "autoload": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tool_name\\": "src/"
+            "AlexBowers\\MultipleDashboard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tool_name\\Tests\\": "tests"
+            "AlexBowers\\MultipleDashboard\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                ":namespace_vendor\\:namespace_tool_name\\ToolServiceProvider"
+                "AlexBowers\\MultipleDashboard\\ToolServiceProvider"
             ]
         }
     },

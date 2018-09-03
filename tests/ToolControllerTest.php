@@ -1,9 +1,9 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tool_name\Tests;
+namespace AlexBowers\MultipleDashboard\Tests;
 
-use :namespace_vendor\:namespace_tool_name\Http\Controllers\ToolController;
-use :namespace_vendor\:namespace_tool_name\:namespace_tool_name;
+use AlexBowers\MultipleDashboard\Http\Controllers\ToolController;
+use AlexBowers\MultipleDashboard\MultipleDashboard;
 use Symfony\Component\HttpFoundation\Response;
 
 class ToolControllerTest extends TestCase
@@ -12,7 +12,7 @@ class ToolControllerTest extends TestCase
     public function it_can_can_return_a_response()
     {
         $this
-            ->get('nova-vendor/:vendor/:package_name/endpoint')
+            ->get('nova-vendor/AlexBowers/nova-multiple-dashboard/endpoint')
             ->assertSuccessful();
     }
 }

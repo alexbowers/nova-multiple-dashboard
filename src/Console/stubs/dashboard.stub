@@ -1,0 +1,27 @@
+<?php
+
+namespace DummyNamespace;
+
+use AlexBowers\MultipleDashboard\Dashboard;
+
+class DummyClass extends Dashboard
+{
+    public $label = 'dashboard-name';
+
+    public function cards()
+    {
+        return [
+            //
+        ];
+    }
+
+    /**
+     * Get the URI key for the dashboard.
+     *
+     * @return string
+     */
+    public function uriKey()
+    {
+        return 'uri-key';
+    }
+}

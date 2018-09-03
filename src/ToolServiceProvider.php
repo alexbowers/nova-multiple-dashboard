@@ -7,6 +7,7 @@ use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use AlexBowers\MultipleDashboard\Http\Middleware\Authorize;
+use AlexBowers\MultipleDashboard\Console\Commands\CreateDashboard;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -17,14 +18,21 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-multiple-dashboard');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/nova-overrides', 'nova');
 
         $this->app->booted(function () {
             $this->routes();
         });
 
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                CreateDashboard::class,
+            ]);
+        }
+
         Nova::serving(function (ServingNova $event) {
-            //
+            DashboardNova::dashboardsIn(app_path('Nova'));
+            Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/tool.js');
         });
     }
 

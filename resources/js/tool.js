@@ -1,9 +1,13 @@
+import Dashboard from './components/Dashboard';
+
+
 Nova.booting((Vue, router) => {
     router.addRoutes([
         {
-            name: 'nova-multiple-dashboard',
-            path: '/nova-multiple-dashboard',
-            component: require('./components/Tool'),
+            name: 'dashboard.custom',
+            path: '/dashboards/:dashboardName',
+            component: Dashboard,
+            props: true,
         },
     ])
 })

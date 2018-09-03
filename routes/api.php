@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use AlexBowers\MultipleDashboard\Http\Controllers\ToolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('endpoint', \AlexBowers\MultipleDashboard\Http\Controllers\ToolController::class . '@index');
+Route::get('/dashboards/{dashboard}', ToolController::class . '@index');

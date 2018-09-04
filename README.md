@@ -11,7 +11,7 @@ You can now add multiple custom dashboards in Laravel Nova.
 
 Whether you want to group some cards together, have different dashboards visible depending on the logged in user, or want to provide a dashboard with your tool, Multiple Dashboards allows you to do this.
 
-![Multiple Dashboard Example](https://github.com/alexbowers/nova-multiple-dashboard/screenshots/example.gif)
+![Multiple Dashboard Example](https://github.com/alexbowers/nova-multiple-dashboard/blob/master/screenshots/example.gif?raw=true)
 
 ## Installation
 

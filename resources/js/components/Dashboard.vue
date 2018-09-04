@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { HasCards } from 'laravel-nova';
+import HasCards from 'laravel-nova/src/mixins/HasCards';
 
 export default {
     mixins: [HasCards],

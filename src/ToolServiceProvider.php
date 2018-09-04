@@ -33,7 +33,7 @@ class ToolServiceProvider extends ServiceProvider
         Nova::serving(function (ServingNova $event) {
             DashboardNova::dashboardsIn(app_path('Nova'));
             DashboardNova::cardsInDashboards(app_path('Nova'));
-            Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/tool.js');
+            Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/MultipleDashboard.js');
         });
     }
 

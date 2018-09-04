@@ -5,6 +5,7 @@ namespace AlexBowers\MultipleDashboard\Http\Requests;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Metrics\Metric;
 use Laravel\Nova\Http\Requests\DashboardMetricRequest as CoreDashboardMetricRequest;
+use AlexBowers\MultipleDashboard\DashboardNova;
 
 class DashboardMetricRequest extends CoreDashboardMetricRequest
 {
@@ -27,6 +28,6 @@ class DashboardMetricRequest extends CoreDashboardMetricRequest
      */
     public function availableMetrics()
     {
-        return Nova::availableDashboardCards($this)->whereInstanceOf(Metric::class);
+        return DashboardNova::allAvailableDashboardCards($this)->whereInstanceOf(Metric::class);
     }
 }

@@ -55,6 +55,15 @@ class DashboardNova extends Nova
         );
     }
 
+    public static function cardsInDashboards($directory)
+    {
+        $dashboards = static::$dashboards;
+
+        foreach ($dashboards as $dashboard) {
+            DashboardNova::cards($dashboard->cards());
+        }
+    }
+
     /**
      * Register the given dashboards.
      *

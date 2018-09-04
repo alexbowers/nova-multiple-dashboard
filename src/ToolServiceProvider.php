@@ -32,6 +32,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             DashboardNova::dashboardsIn(app_path('Nova'));
+            DashboardNova::cardsInDashboards(app_path('Nova'));
             Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/tool.js');
         });
     }
@@ -50,6 +51,10 @@ class ToolServiceProvider extends ServiceProvider
         Route::middleware(['nova', Authorize::class])
                 ->prefix('nova-vendor/AlexBowers/nova-multiple-dashboard')
                 ->group(__DIR__.'/../routes/api.php');
+
+        Route::get('/nova', function () {
+            return redirect('/nova/dashboards/main');
+        });
     }
 
     /**

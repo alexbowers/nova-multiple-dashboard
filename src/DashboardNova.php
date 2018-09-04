@@ -16,6 +16,23 @@ class DashboardNova extends Nova
     public static $dashboards = [];
 
     /**
+     * The registered cards for the default dashboard.
+     */
+    public static $default_dashboard_cards = [];
+
+    /**
+     * Copy the default dashboard cards so we can
+     * return which cards are in use on the
+     * main dashboard.
+     */
+    public static function copyDefaultDashboardCards()
+    {
+        static::$default_dashboard_cards = static::$cards;
+
+        return new static;
+    }
+
+    /**
      * Get the dashboards registered with Nova.
      *
      * @param \Illuminate\Http\Request $request
@@ -26,6 +43,9 @@ class DashboardNova extends Nova
         return collect(static::$dashboards)->all();
     }
 
+    /**
+     * Register the dashboards from a specific directory
+     */
     public static function dashboardsIn($directory)
     {
         $namespace = app()->getNamespace();
@@ -55,7 +75,10 @@ class DashboardNova extends Nova
         );
     }
 
-    public static function cardsInDashboards($directory)
+    /**
+     * Load the cards in use in each dashboard
+     */
+    public static function cardsInDashboards()
     {
         $dashboards = static::$dashboards;
 

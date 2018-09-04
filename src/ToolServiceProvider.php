@@ -20,8 +20,18 @@ class ToolServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views/nova-overrides', 'nova');
 
+        Nova::serving(function (ServingNova $event) {
+            DashboardNova::dashboardsIn(app_path('Nova'));
+            Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/MultipleDashboard.js');
+        });
+
         $this->app->booted(function () {
             $this->routes();
+
+            Nova::serving(function (ServingNova $event) {
+                DashboardNova::copyDefaultDashboardCards();
+                DashboardNova::cardsInDashboards();
+            });
         });
 
         if ($this->app->runningInConsole()) {
@@ -29,12 +39,6 @@ class ToolServiceProvider extends ServiceProvider
                 CreateDashboard::class,
             ]);
         }
-
-        Nova::serving(function (ServingNova $event) {
-            DashboardNova::dashboardsIn(app_path('Nova'));
-            DashboardNova::cardsInDashboards(app_path('Nova'));
-            Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/MultipleDashboard.js');
-        });
     }
 
     /**

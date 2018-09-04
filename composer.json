@@ -15,21 +15,14 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "laravel/nova": "*"
+        "php": ">=7.1.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.6",
-        "phpunit/phpunit": "7.1"
+        "phpstan/phpstan": "^0.10.3"
     },
     "autoload": {
         "psr-4": {
             "AlexBowers\\MultipleDashboard\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "AlexBowers\\MultipleDashboard\\Tests\\": "tests"
         }
     },
     "extra": {

@@ -52,9 +52,6 @@ class ToolServiceProvider extends ServiceProvider
                 ->prefix('nova-vendor/AlexBowers/nova-multiple-dashboard')
                 ->group(__DIR__.'/../routes/api.php');
 
-        Route::get('/nova', function () {
-            return redirect('/nova/dashboards/main');
-        });
     }
 
     /**

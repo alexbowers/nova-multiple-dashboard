@@ -44,6 +44,16 @@ class DashboardNova extends Nova
     }
 
     /**
+     * Register one or more dashboards
+     *
+     * @param Dashboard ...$dashboards
+     */
+    public static function registerDashboards(Dashboard ...$dashboards)
+    {
+        static::dashboards($dashboards);
+    }
+
+    /**
      * Register the dashboards from a specific directory
      */
     public static function dashboardsIn($directory)

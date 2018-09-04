@@ -21,6 +21,9 @@ class CreateDashboard extends GeneratorCommand
      */
     protected $description = 'Create a dashboard for Nova.';
 
+    /**
+     * Announce the type for CLI output.
+     */
     protected $type = 'Dashboard';
     
     /**

@@ -52,14 +52,4 @@ class ToolServiceProvider extends ServiceProvider
                 ->prefix('nova-vendor/AlexBowers/nova-multiple-dashboard')
                 ->group(__DIR__.'/../routes/api.php');
     }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
 }

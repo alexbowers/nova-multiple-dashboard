@@ -21,7 +21,7 @@ class ToolServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views/nova-overrides', 'nova');
 
         Nova::serving(function (ServingNova $event) {
-            DashboardNova::dashboardsIn(app_path('Nova'));
+            DashboardNova::dashboardsIn(app_path('Nova/Dashboards'));
             Nova::script('nova-multiple-dashboard', __DIR__ . '/../dist/js/MultipleDashboard.js');
         });
 

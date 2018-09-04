@@ -1,5 +1,5 @@
 {
-    "name": "AlexBowers/nova-multiple-dashboard",
+    "name": "alexbowers/nova-multiple-dashboard",
     "description": "Support for multiple custom dashboards in Laravel Nova",
     "keywords": [
         "laravel",

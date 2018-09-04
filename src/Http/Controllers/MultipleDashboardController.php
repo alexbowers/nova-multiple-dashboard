@@ -7,7 +7,7 @@ use AlexBowers\MultipleDashboard\File;
 use Illuminate\Routing\Controller;
 use AlexBowers\MultipleDashboard\Http\Requests\DashboardCardRequest;
 
-class ToolController extends Controller
+class MultipleDashboardController extends Controller
 {
     /**
      * List the cards for the dashboard.

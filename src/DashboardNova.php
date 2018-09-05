@@ -40,7 +40,10 @@ class DashboardNova extends Nova
      */
     public static function availableDashboards(Request $request)
     {
-        return collect(static::$dashboards)->all();
+        return collect(static::$dashboards)
+            ->filter
+            ->authorize($request)
+            ->all();
     }
 
     /**

@@ -2,7 +2,6 @@
 # Support for multiple custom dashboards in Laravel Nova
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/alexbowers/nova-multiple-dashboard.svg?style=flat-square)](https://packagist.org/packages/alexbowers/nova-multiple-dashboard)
-![CircleCI branch](https://img.shields.io/circleci/project/github/alexbowers/nova-multiple-dashboard/master.svg?style=flat-square)
 [![Quality Score](https://img.shields.io/scrutinizer/g/alexbowers/nova-multiple-dashboard.svg?style=flat-square)](https://scrutinizer-ci.com/g/alexbowers/nova-multiple-dashboard)
 [![Total Downloads](https://img.shields.io/packagist/dt/alexbowers/nova-multiple-dashboard.svg?style=flat-square)](https://packagist.org/packages/alexbowers/nova-multiple-dashboard)
 

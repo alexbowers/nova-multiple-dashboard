@@ -26,6 +26,8 @@ There is now a `php artisan nova:dashboard <name>` command exposed via the CLI.
 
 If you run this, you'll get a `App/Nova/Dashboards` directory created, which will house your custom dashboards.
 
+Dashboards have a `public $order` variable you can use to set the order they appear in the navbar. See the `Dashboard` class for more.
+
 If you are another package creating a nova dashboard, you will need to register it using:
 
 ```php

@@ -84,7 +84,7 @@ class DashboardNova extends Nova
                 }
 
                 return app()->make($dashboard);
-            })->sortBy('order')->all()
+            })->sortBy('label')->sortBy('order')->all()
         );
     }
 

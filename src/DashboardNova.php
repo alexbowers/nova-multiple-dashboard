@@ -78,13 +78,13 @@ class DashboardNova extends Nova
         }
 
         static::dashboards(
-            collect($dashboards)->sort()->transform(function ($dashboard) {
+            collect($dashboards)->transform(function ($dashboard) {
                 if ($dashboard instanceof Dashboard) {
                     return $dashboard;
                 }
 
                 return app()->make($dashboard);
-            })->all()
+            })->sortBy('label')->sortBy('order')->all()
         );
     }
 

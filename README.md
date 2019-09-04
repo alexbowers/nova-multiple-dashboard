@@ -12,6 +12,12 @@ Whether you want to group some cards together, have different dashboards visible
 
 ![Multiple Dashboard Example](https://github.com/alexbowers/nova-multiple-dashboard/blob/master/screenshots/example.gif?raw=true)
 
+# Deprecated
+
+This is now covered in Nova 2.1.0+ so does not need a package for it.
+
+See [documentation](https://nova.laravel.com/docs/2.0/customization/dashboards.html#overview)
+
 ## Installation
 
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
